@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@font-face {
+  font-family: "kraash";
+  src: url(../fonts/Kraash\ Black.ttf);
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --desktop: 1280px;
+  --mobile: 375px;
+  --side: 1rem;
+  --side-double: calc(var(--side) * 2);
+  --border: 5px;
+  --size-button: 25px;
+
+  --black: rgb(0, 0, 0);
+  --purple: rgb(90, 23, 181);
+  --red: rgb(255, 0, 0);
+  --orange: rgb(255, 165, 0);
+  --brown: rgb(165, 42, 42);
+
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+/* reset browser style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  outline: transparent !important;
+  text-decoration: none;
+}
+
+body {
+  max-width: var(--desktop);
+  margin: auto;
+  text-align: center;
+  text-align: center;
+  padding: var(--side);
+}
+
+button {
+  cursor: pointer;
+  padding: var(--side);
+  font-family: inherit;
+  font-size: var(--size-button);
+  border-radius: 0;
+  border: 2px solid var(--black);
+}
+
+hr {
+  border: 3px solid var(--brown);
+  background: var(--brown);
+}
+
+#button {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  gap: calc(var(--side) / 2);
+  color: var(--black);
+  -webkit-text-fill-color: var(--black);
+}
+#button:hover button {
+  background: var(--orange);
+}
+
+.header_layout {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  gap: var(--side);
+}
+
+.header_layout span {
+  font-family: "kraash";
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--orange);
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #d60;
+}
+
+.header_layout h1 {
+  cursor: default;
+  line-height: 1.5;
+}
+
+.header_layout h1 img {
+  animation: rotate 2s linear infinite;
+}
+
+.header_layout h1 img:hover {
+  cursor: pointer;
+  animation: rotate 0.25s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main_layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--side);
+  margin-top: calc(var(--side) + var(--side-double));
+  margin-bottom: calc(var(--side) + var(--side-double));
+}
+
+.main_layout img {
+  width: 50px;
+}
+
+.token_layout {
+  border: var(--border) solid var(--brown);
+  padding: var(--side-double);
+  display: flex;
+  flex-direction: column;
+  gap: var(--side-double);
+}
+
+#token {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font-size: 14px;
+  /* font-size: calc(var(--index) * 0.7); */
+  padding: 5px;
+}
+#token::after {
+  content: url(../img/file-copy-line.svg);
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+#token:hover {
+  cursor: pointer;
+  background: var(--red);
+}
+@media only screen and (min-width: 420px) {
+  #token {
+    font-size: max(calc(var(--index) * 0.94), 17px);
+  }
+}
+@media only screen and (min-width: 520px) {
+  #token {
+    font-size: min(calc(var(--index) * 1.2), 34px);
+  }
+}
+
+.token_layout a {
+  width: fit-content;
+  margin: auto;
+  color: var(--black);
+  font-size: 25px;
+}
+
+.token_layout .img_token {
+  border: var(--border) solid var(--red);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+}
+.token_layout .img_token:hover {
+  border: var(--border) solid var(--orange);
+}
+
+.token_layout .img_token img {
+  width: 100px;
+}
+
+.token_layout .img_token p {
+  padding: 10px;
+}
+
+.token_layout .anim_token img {
+  width: 50px;
+}
+
+.token_layout .card_token {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  gap: var(--side-double);
+  margin: auto;
+}
+
+.token_layout .card_token .card {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  padding: var(--side);
+  border: var(--border) solid var(--orange);
+}
+
+.token_layout .card_token .card p {
+  font-size: 20px;
+}
+
+.token_layout .card_token .card span.number {
+  font-size: 30px;
+}
+
+.gif_random img {
+  width: auto;
+  height: 75px;
+}
+
+.gif_eating {
+  display: flex;
+  place-content: center;
+  position: relative;
+  background: var(--purple);
+  border: var(--border) solid var(--orange);
+}
+
+.gif_eating .eating_img {
+  background-image: url(../gif/hamster-eating.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 498px;
+  height: auto;
+  aspect-ratio: 83/52;
+}
+
+.gif_eating .eating_text {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 25px;
+  cursor: default;
+}
+
+.gif_history {
+  width: 100%;
+}
+
+.gif_history img {
+  width: inherit;
+}
+
+.footer_layout {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap: var(--side);
+}
+
+.footer_layout ul.social {
+  display: flex;
+  place-content: center;
+  gap: var(--side-double);
+}
+
+.footer_layout ul.social img {
+  font-size: 30px;
+}
+
+.footer_layout ul.social a {
+  color: var(--black);
+  font-size: 30px;
+}
+
+.footer_layout p {
+  cursor: default;
+  font-weight: normal;
+}
