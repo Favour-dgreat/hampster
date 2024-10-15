@@ -102,6 +102,53 @@ hr {
   cursor: pointer;
   animation: rotate 0.25s linear infinite;
 }
+#dark-memes {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.meme1, .meme2 {
+  flex: 1;
+  max-width: 50%;
+  border: 1px solid black;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: colorChange 5s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400%;
+}
+
+/* Keyframe animation for color change */
+@keyframes colorChange {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 
 @keyframes rotate {
   to {
@@ -127,6 +174,9 @@ hr {
   display: flex;
   flex-direction: column;
   gap: var(--side-double);
+  background-image: url(../gif/ss.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #token {
@@ -215,11 +265,119 @@ hr {
   font-size: 30px;
 }
 
+.gif_random{
+  position: relative;
+  align-items: center; /* Center content vertically */
+}
+.overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Initially transparent */
+  background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400%;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Position each overlay vertically */
+.overlay1 {
+  top: 30%;
+}
+
+.overlay2 {
+  top: 50%;
+}
+
+.overlay3 {
+  top: 70%;
+}
+
+/* Hover effect */
+.gif_random:hover .overlay {
+  opacity: 1; /* Makes the text visible */
+  animation: colorChange 5s infinite;
+}
+
+/* Keyframe animation for color change */
+@keyframes colorChange {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
 .gif_random img {
   width: auto;
   height: 75px;
 }
+#video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.text-overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400%;
+  animation: colorChange 5s infinite;
+}
+
+/* Position each text vertically */
+.text1 {
+  top: 10%;
+}
+
+.text2 {
+  top: 30%;
+}
+
+.text3 {
+  top: 50%;
+}
+
+.text4 {
+  top: 70%;
+}
+
+.text5 {
+  top: 90%;
+}
+
+/* Keyframe animation for color change */
+@keyframes colorChange {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
 .gif_eating {
   display: flex;
   place-content: center;
@@ -237,6 +395,11 @@ hr {
   width: 498px;
   height: auto;
   aspect-ratio: 83/52;
+}
+
+.gif_1{
+  background-image: url(../gif/xl.webp);
+  padding: 10%;
 }
 
 .gif_eating .eating_text {
