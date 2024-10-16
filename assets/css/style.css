@@ -94,6 +94,8 @@ hr {
   line-height: 1.5;
 }
 
+
+
 .header_layout h1 img {
   animation: rotate 2s linear infinite;
 }
@@ -115,6 +117,12 @@ hr {
   max-width: 50%;
   border: 1px solid black;
 }
+
+.meme3, .meme4 {
+  flex: 1;
+  max-width: 50%;
+}
+
 
 
 .overlay {
