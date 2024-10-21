@@ -137,7 +137,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
 
 body {
-  cursor: url('../gif/wand.gif'), auto;
   margin: 0;
   padding: 0;
   position: relative; /* Added for positioning the sparkle */
