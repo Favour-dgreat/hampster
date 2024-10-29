@@ -153,19 +153,11 @@ body {
 }
 iframe {
   width: 100%;
-  height: calc(100vh + 50px); /* Adjust 50px to the height of the area to hide */
+  height: calc(100vh + 100px); /* Adjust based on the crop amount */
   border: none;
   position: absolute;
   top: -50px; /* Move the iframe up to hide the top part */
   left: 0;
-}
-
-.magic-wand-container {
-  position: absolute; /* Allow positioning of the wand and sparkle */
-  pointer-events: none; /* Prevent the container from blocking interactions */
-  top: 50%; /* Center it vertically */
-  left: 50%; /* Center it horizontally */
-  transform: translate(-50%, -50%); /* Centering adjustment */
 }
 
 .magic-wand {
