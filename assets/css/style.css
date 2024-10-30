@@ -421,10 +421,10 @@ hr {
   }
   /* Styles for desktop screens */
   #mm{
-    width: 5%;
+    width: 2%;
   }
   #ss{
-    width: 5%;
+    width: 2%;
   }
 
   #ff{
@@ -432,7 +432,7 @@ hr {
   }
 
   #zz{
-    width: 15%;
+    width: 8%;
   }
   .text1 {
     top: 10%;
@@ -490,10 +490,16 @@ hr {
 
 @media (max-width: 767px) {
   #dark-memes {
-    position: relative;
-    display: block;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  #dark-memes img{
+    width: 48%; /* Adjust to fit two images per row */
+      max-width: 100%;
+      height: auto;
+    }
+
   }
   /* Styles for mobile devices */
   #zz{
@@ -550,7 +556,7 @@ hr {
   #n{
     width: 100%;
   }
-}
+
 
 
 
