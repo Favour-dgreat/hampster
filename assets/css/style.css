@@ -396,11 +396,7 @@ hr {
 }
 
 
-.meme1, .meme2 {
-  flex: 1;
-  max-width: 50%;
-  border: 1px solid black;
-}
+
 
 .meme3, .meme4 {
   flex: 1;
@@ -408,6 +404,10 @@ hr {
 }
 
 @media (min-width: 1024px) {
+  .meme1, .meme2 {
+    flex: 1;
+    max-width: 50%;
+  }
   #dark-memes {
     position: relative;
     display: flex;
@@ -453,6 +453,7 @@ hr {
     top: 90%;
   }
   .text-overlay {
+    display: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -489,6 +490,10 @@ hr {
 }
 
 @media (max-width: 767px) {
+  .meme1, .meme2 {
+    flex: 1;
+    max-width: 100%;
+  }
   #dark-memes {
     display: flex;
       flex-wrap: wrap;
@@ -499,6 +504,40 @@ hr {
       max-width: 100%;
       height: auto;
     }
+    .text-overlay {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2px; /* Adjust size as needed */
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400%;
+      animation: colorChange 5s infinite;
+    }
+    #i{
+      width: 20%
+    }
+    #j{
+      width: 20%;
+    }
+    #k{
+      width: 20%;
+    }
+  
+    #l{
+      width: 10%
+    }
+    #m{
+      width: 10%;
+    }
+    #n{
+      width: 30%;
+    }
+  
 
   }
   /* Styles for mobile devices */
@@ -537,26 +576,7 @@ hr {
     background-size: 400%;
     animation: colorChange 5s infinite;
   }
-  #i{
-    width: 200%
-  }
-  #j{
-    width: 100%;
-  }
-  #k{
-    width: 200%;
-  }
-
-  #l{
-    width: 100%
-  }
-  #m{
-    width: 100%;
-  }
-  #n{
-    width: 100%;
-  }
-
+  
 
 
 
@@ -770,7 +790,7 @@ hr {
 #video-container {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
