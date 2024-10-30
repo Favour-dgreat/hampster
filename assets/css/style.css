@@ -119,7 +119,7 @@
   --desktop: 1280px;
   --mobile: 375px;
   --side: 1rem;
-  --side-double: calc(var(--side) * 2);
+  --side-double: calc(var(--side) * 1);
   --border: 5px;
   --size-button: 25px;
 
