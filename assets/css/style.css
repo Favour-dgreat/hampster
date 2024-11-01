@@ -728,7 +728,6 @@ hr {
   flex-wrap: wrap;
   gap: var(--side-double);
   margin: auto;
-  color: white;
 }
 
 .token_layout .card_token .card {
