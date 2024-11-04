@@ -403,6 +403,9 @@ hr {
   max-width: 50%;
 }
 
+
+
+
 @media (min-width: 1024px) {
   .meme1, .meme2 {
     flex: 1;
